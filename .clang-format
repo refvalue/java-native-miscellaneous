@@ -1,0 +1,41 @@
+Language: Cpp
+BasedOnStyle:  LLVM
+AccessModifierOffset: -4
+AlignAfterOpenBracket: DontAlign
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Left
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBinaryOperators: NonAssignment
+ColumnLimit:     120
+DeriveLineEnding: false
+IncludeBlocks:   Regroup
+IncludeCategories:
+  # Headers in "" with extension.
+  - Regex:           '"([A-Za-z0-9.\Q/-_\E])+"'
+    Priority:        1
+  # Headers in <> without extension.
+  - Regex:           '<([A-Za-z0-9\Q/-_\E])+>'
+    Priority:        2
+# Headers in <> from specific external libraries.
+  - Regex:           '<g6\/'
+    Priority:        3
+  # Headers in <> from specific external libraries.
+  - Regex:           '<vtk'
+    Priority:        4
+  # Headers in <> from specific external libraries.
+  - Regex:           '<(AppCore|Ultralight)\/'
+    Priority:        5
+  # Headers in <> with extension.
+  - Regex:           '<([A-Za-z0-9.\Q/-_\E])+>'
+    Priority:        6
+IndentCaseBlocks: true
+IndentWidth:     4
+IndentWrappedFunctionNames: true
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: All
+PointerAlignment: Left
+SpaceAfterCStyleCast: true
