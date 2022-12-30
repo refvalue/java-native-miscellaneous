@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required (VERSION 3.14)
 
-project(process-invoker CXX)
+project(gx-java-util CXX)
 
 option(GX_STATIC_RUNTIME "Whether to link C/C++ runtime statically." ON)
 
@@ -22,3 +22,4 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(src/jni)
+add_subdirectory(test)

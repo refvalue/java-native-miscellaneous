@@ -31,6 +31,18 @@ gx_make_install_third_party_library(
 )
 
 gx_make_install_third_party_library(
+    SEAL
+	REQUIRED
+    PARALLEL_BUILD
+    SYNC_BUILD_TYPE
+    GENERATOR ${CMAKE_GENERATOR}
+    ${runtime_args}
+    ${additional_args}
+    SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/third-party/SEAL
+    TOOLCHAIN_FILE ${toolchain_file}
+)
+
+gx_make_install_third_party_library(
     Jdk
 	REQUIRED
     GENERATOR ${CMAKE_GENERATOR}
